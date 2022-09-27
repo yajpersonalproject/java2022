@@ -10,7 +10,7 @@ public class Example4
 	{
 		for(int i = 0; i < 20; i++)
 		{	// everything in between these { } will repeat 20 times
-			IBIO.output(i + " hello " + i);
+			IBIO.output("Hello " + i);
 		}
 		
 		/*
