@@ -14,3 +14,8 @@ public class Example3
 	}
 }
 
+/* OUTPUT:
+enter a number 5
+and another one 3
+the product of 5 and 3 is 15
+*/

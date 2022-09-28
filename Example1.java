@@ -6,6 +6,14 @@ public class Example1
 	{
 		int x = 17; // change this, recompile and run again
 		IBIO.output("The number was " + x);
+		x = x * 2; // change this, recompile and run again
+		IBIO.output("The number was " + x);
 	}
 }
 
+/* Output:
+
+The number was 17
+The number was 34
+
+*/
