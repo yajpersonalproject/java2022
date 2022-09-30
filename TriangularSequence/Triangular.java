@@ -1,5 +1,5 @@
 /*
- * 
+ * Triangular sequence mock test Q1 IB CS SL
  */
 
 
@@ -8,7 +8,8 @@ public class Triangular
 	
 	public static void main (String[] args)
 	{
-		IBIO.output("Marcos");
+		IBIO.output("\nTRIANGULAR SEQUENCE\n");
+		IBIO.output("Mi nombre es Juan Perez");
 		int howMany ;
 		do
 		{
@@ -20,31 +21,34 @@ public class Triangular
 			}
 			if(howMany != 0)
 			{
-				int sum = 0;
+				int term = 0;
 				double average = 0;
 				for(int i = 1; i <= howMany; i++)
 				{
-					sum = sum + i;
-					average = average + sum;
+					term = term + i;
+					average = average + term;
 					if(howMany <= 20)
-					{	IBIO.out(sum);
+					{	IBIO.out(term);
 						if(i < howMany)
 						{	IBIO.out(", ");
 						}
 					}
 				}
 				if(howMany > 20)
-				{	IBIO.output(sum);
+				{	IBIO.output(term);
+				} else {
+					IBIO.output("");
 				}
-				int n = sum;
+				average = average / howMany;
+				IBIO.output( "Average = " + average );
+				int n = term;
 				int digitsCounter = 0;
 				do
 				{	n = n / 10;
 					digitsCounter = digitsCounter + 1;
 				} while( n > 0 );
-				IBIO.output("");
-				IBIO.output(sum + " has " + digitsCounter + " digits");
-				IBIO.output("Average = " + average);
+				IBIO.output(term + " has " + digitsCounter + " digits");
+				IBIO.output(""); // leaves an empty line
 			}
 		} while(howMany != 0);
 	}
