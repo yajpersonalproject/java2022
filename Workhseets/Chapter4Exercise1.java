@@ -11,7 +11,6 @@ public class Chapter4Exercise1
 		int b = IBIO.inputInt("Enter second nuber = ");
 		do
 		{
-			
 			n = IBIO.inputInt("1 +; 2 *; 3 -; 4 /; 5 exits: ");
 			switch(n)
 			{	case 1:
