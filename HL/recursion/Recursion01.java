@@ -23,6 +23,25 @@ public class Recursion01
 		}
 	}
 	
+	public static void countDown(int n)
+	{	IBIO.out(n + " ");
+		if(n <= 1)			// base case
+		{	return;
+		} else {
+			countDown(n-1);
+		}
+	}
+	
+	public static void count(int n)
+	{	
+		if(n < 1)			// base case
+		{	return;
+		} else {
+			count(n-1);
+		}
+		IBIO.out(n + " ");
+	}
+	
 	public static void main(String[] args)
 	{
 		int n = IBIO.inputInt("Enter a number: ");
@@ -33,14 +52,20 @@ public class Recursion01
 		// (function) to calculate the factorial
 		System.out.println();
 		
+		/*
 		for(int i = n; i <= n+5; i++)
 		{	System.out.print(i + "!= ");
 			System.out.println(" = " + factorial(i));
 		}
+		*/
 		
 		System.out.println();
 		System.out.print(n + "!= ");
 		System.out.println(fact(n)); // method without the additional display
+		System.out.println();
+		count(4);
+		System.out.println();
+		countDown(4);
 	}
 }
 
