@@ -17,7 +17,7 @@ public class Fibo
 	public static void main (String[] args)
 	{
 		c = 0;
-		System.out.println( fibonacci(15) );
+		System.out.println( fibonacci(20) );
 		System.out.println( c );
 	
 	}
