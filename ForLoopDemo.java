@@ -4,18 +4,24 @@ public class ForLoopDemo
 	
 	public static void main (String[] args)
 	{
-		for(int i = 0; i < 11; i++)
+		int i;
+		for(i = 0; i < 11; i++)
 		{	System.out.print(i + " ");
+		}
+		
+		System.out.println("\n" + i);
+		/* OR
+		System.out.println();
+		System.out.println(i);
+		*/
+		System.out.println("---------------");
+		for(int j = 10; j >= 0; j--)
+		{	System.out.print(j + " ");
 		}
 		System.out.println();
 		System.out.println("---------------");
-		for(int i = 10; i >= 0; i--)
-		{	System.out.print(i + " ");
-		}
-		System.out.println();
-		System.out.println("---------------");
-		for(int i = 0; i < 21; i=i+2)
-		{	System.out.print(i + " ");
+		for(int j = 0; j < 21; j=j+2)
+		{	System.out.print(j + " ");
 		}
 	}
 }

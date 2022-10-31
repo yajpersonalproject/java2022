@@ -46,6 +46,7 @@ public class Chapter4Example
 				break;
 		}
 		char c = IBIO.inputChar("Enter a character: ");
+		
 		switch(c)
 		{	case 'a':
 				System.out.println("A-Awesome");
@@ -69,6 +70,7 @@ public class Chapter4Example
 				System.out.println("Not a concept grade");
 				break;
 		}
+		
 		num = IBIO.inputInt("Enter a number: ");
 		switch(num)
 		{	case 2:
