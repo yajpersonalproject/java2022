@@ -20,8 +20,8 @@ public class CharDemo
 		{	System.out.println( c1 + " is a lower case letter");
 		} else
 		{	System.out.println( c1 + " is a puctuation mark or symbol");
-		
-		char c = IBIO.inputChar("Enter a character: ");
+		}
+		char c = IBIO.inputChar("Enter an A~F grade: ");
 		c = Character.toLowerCase(c);
 		
 		switch(c)
