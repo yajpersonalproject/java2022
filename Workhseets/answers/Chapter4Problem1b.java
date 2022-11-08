@@ -1,5 +1,5 @@
 /*
-Write a program that will let you enter two numbers. Then it will ask you to enter “1” for add, “2” for multiply, “3” for quit. This will be displayed on the screen like below:
+Write a program that will let you enter two numbers. Then it will ask you to enter A for add, M for multiply, Q for quit. This will be displayed on the screen like below:
    Press:	[1] for addition
 			[2] for multiplication
 			[3] for quit

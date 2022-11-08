@@ -1,5 +1,5 @@
 public class Chapter4Problem1 // 4.1
-
+{
 	public static void main(String args[])
 	{
 		int a = IBIO.inputInt("enter first number ");
