@@ -38,10 +38,7 @@ public class Chapter6Problem1
 			System.out.println();
 		}
 		
-		
-		
 	}
-	
 	
 }
 
