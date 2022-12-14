@@ -1,12 +1,17 @@
 /*
  * This class will output a Xmas tree
+ * of variable size
+ * This version is fully modular...
+ *  ...implementing the algorithm as a method
+ * Note that methods may call other methods
+ * to create an ingenious solution
  * 
  */
  
 public class XmasTree2
 {
 
-	// this method makes a String of <howMany> asterisks ( a line of <howMany> *s )
+	// this method returns a String of <howMany> asterisks ( a line of <howMany> *s )
 	static String stars(int howMany)
 	{
 		String output = ""; // empty string
@@ -17,7 +22,7 @@ public class XmasTree2
 		return output;
 	}
 
-	// this method makes a String of <howMany> spaces
+	// this method returns a String of <howMany> spaces
 	static String spaces(int howMany)
 	{
 		String output = ""; // empty string
