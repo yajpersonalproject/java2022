@@ -17,10 +17,10 @@ public class Chapter7Example
 
     public static void main(String[] args)
     {
-		for (int i = 1; i < 20; i++)
+		for (int i = 1; i <= 20; i++)
 		{
-			String s = pad(i * i, 10) +
-				pad(i * i, 10) + pad(i * i * i, 10);
+			String s = pad(i * i, 3) +
+				pad(i * i, 4) + pad(i * i * i, 5);
 			IBIO.output(s);
 		}
 	}

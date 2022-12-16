@@ -44,7 +44,7 @@ public class Chapter6Problem3
 		for(int i = 1; i <= n; i++)
 		{
 			System.out.println( spaces(i) +
-			stars(n) );
+			stars(n) + spaces((n-i)*2) + stars(n) );
 		}
 
 	}
