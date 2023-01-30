@@ -1,24 +1,51 @@
 
 public class ArrayDemo 
-{
-	public static void printArray(int[] a)
+{	// constant:
+	private static final int MAXSIZE = 4;
+	
+	public static void printArray(int[] array)
 	{
-		if(a.length > 0)
-		{	for(int index = 0; index < a.length; index++)
-			{	System.out.println("[" + index + "] " + a[index]);
+		if(array.length > 0)
+		{	for(int index = 0; index < array.length; index++)
+			{	System.out.println("[" + index + "] " + array[index]);
 			}
 		} else {
 			System.out.println("nothing inside of numbers array");
 		}
 	}
 	
+	// populate the array
+	public static void inputArray(int[] array)
+	{
+		for(int index = 0; index < array.length; index++)
+		{
+			System.out.print("Enter integer #" + (index+1) + ": ");
+			array[index] = IBIO.inputInt();
+		}
+	}
+	
+	public static double averageArray(int[] array)
+	{
+		double average = 0;
+		for(int index = 0; index < array.length; index++)
+		{
+			average = average + array[index];
+		}
+		average = average / array.length;
+		return average;
+	}
+	
 	public static void main (String[] args)
 	{
 		int[] numbers; // declaration
-		numbers = new int[10]; // initialisation
-		System.out.println(numbers);
+		numbers = new int[MAXSIZE]; // initialisation
+		//System.out.println(numbers);
 		printArray(numbers);
-		
+		inputArray(numbers);
+		printArray(numbers);
+		double average = averageArray(numbers) ;
+		System.out.println( "Average = " + average );
+		System.out.println();
 	}
 }
 
