@@ -1,8 +1,9 @@
 
 public class ArrayDemo 
-{	// constant:
+{	// global constant:
 	private static final int MAXSIZE = 4;
 	
+	// method: return type/method name/parameter
 	public static void printArray(int[] array)
 	{
 		if(array.length > 0)
