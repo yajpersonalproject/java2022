@@ -15,6 +15,11 @@ public class ArrayDemo
 		}
 	}
 	
+	public static int add1(int x)
+	{	x = x + 1;
+		return x;
+	}
+	
 	// populate the array
 	public static void inputArray(int[] array)
 	{
@@ -41,12 +46,16 @@ public class ArrayDemo
 		int[] numbers; // declaration
 		numbers = new int[MAXSIZE]; // initialisation
 		//System.out.println(numbers);
+		// arrays are passed by reference to methods
 		printArray(numbers);
 		inputArray(numbers);
 		printArray(numbers);
 		double average = averageArray(numbers) ;
 		System.out.println( "Average = " + average );
-		System.out.println();
+		// example of primitives being passed by value as method parameters
+		int x = 5;
+		System.out.println( add1(x) );
+		System.out.println( x );
 	}
 }
 
