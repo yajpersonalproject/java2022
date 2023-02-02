@@ -27,6 +27,7 @@ public class ArrayDemo
 		{
 			System.out.print("Enter integer #" + (index+1) + ": ");
 			array[index] = IBIO.inputInt();
+			printArray(array);
 		}
 	}
 	
