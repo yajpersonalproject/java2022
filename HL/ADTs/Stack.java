@@ -25,7 +25,26 @@ public class Stack
 		{	newNode.next = top;
 			top = newNode;
 		}
+	}
+	
+	public int pop()
+	{
+		int d = top.data;
+		top = top.next;
+		return d;
+	}
 		
-
+	public void printStack()
+	{
+		Node temp = top;
+		System.out.print("top -> ");
+		while( temp != null )
+		{
+			System.out.print(temp.data);
+			System.out.print(" -> ");
+			temp = temp.next;
+		}
+		System.out.println("NULL");
+	}
 }
 
