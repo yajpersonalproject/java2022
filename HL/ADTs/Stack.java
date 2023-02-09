@@ -29,11 +29,17 @@ public class Stack
 	
 	public int pop()
 	{
-		int d = top.data;
-		top = top.next;
-		return d;
+		if(!isEmpty())
+		{
+			int d = top.data;
+			top = top.next;
+			return d;
+		} else {
+			System.out.println("Stack is empty.");
+			return 0;
+		}
 	}
-		
+	
 	public void printStack()
 	{
 		Node temp = top;
