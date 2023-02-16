@@ -24,7 +24,17 @@ public class ArrayDemoString
 		System.out.printf("\n\t[ %d elements in array ]\n", lastIndex);
 	}
 	
-	public static void add(String[] a, String data)
+	public static void printWholeArray(String[] a)
+	{
+		System.out.print( "Start -->");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print( "  " + a[i]);
+		}
+		System.out.println();
+	}
+	
+	public static void append(String[] a, String data)
 	{
 		if(isFull())
 			System.out.println("Error - array full");
@@ -32,7 +42,7 @@ public class ArrayDemoString
 			a[lastIndex] = data;
 			lastIndex++;
 		}
-		printArray(a);
+		printWholeArray(a);
 	}
 	
 	public static int search(String[] a, String data)
@@ -83,7 +93,7 @@ public class ArrayDemoString
 		for(String x : original)
 		{	
 			System.out.printf(" >>> Adding %s to array\n", x);
-			add(array, x);
+			append(array, x);
 		}
 		
 		System.out.println("\nsearch for Anne: " + search(array, "Anne") );
