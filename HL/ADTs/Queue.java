@@ -1,7 +1,12 @@
-//
-// ADT: queue skeleton -- FIFO
-// enqueue, dequeue, isEmpty, printQueue
-//
+/*
+ * ADT: queue skeleton -- FIFO
+ * Complete the following methods:
+ * 	enqueue, dequeue, isEmpty, printQueue
+ * 
+ * Requirements for this challenge:
+ *  IBIO.java, Node.java, QueueTest.java
+ */
+
 public class Queue
 {
 	Node head;
@@ -14,22 +19,19 @@ public class Queue
 	
 	public void enQueue(int data)
 	{
-		Node newNode = new Node();
-		newNode.data = data;
-		// change as appropriate
-		
+		// add your code here
 	}
 	
 	public int deQueue()
 	{	
-		// change as appropriate
+		// add & change as appropriate
 		return 0;
 		
 	}
 	
 	public void printQueue()
 	{	
-		// add as appropriate
+		// add your code here
 	}
 			
 	

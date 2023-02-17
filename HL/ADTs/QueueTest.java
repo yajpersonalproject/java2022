@@ -1,3 +1,12 @@
+/*
+ *
+ * Use this class to test your Queue.java class
+ * mrdv 2023
+ * 
+ * https://www.baeldung.com/java-printstream-printf
+ * https://www.digitalocean.com/community/tutorials/java-printf-method
+ * 
+ */
 
 public class QueueTest
 {
