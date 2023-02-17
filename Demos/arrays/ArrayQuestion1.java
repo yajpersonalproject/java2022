@@ -1,4 +1,10 @@
-
+/*
+ * Practice question #1 for written test #2
+ * Quarter 3 Grade 11
+ *  https://www.baeldung.com/java-printstream-printf
+ * https://www.digitalocean.com/community/tutorials/java-printf-method
+ * 
+ */
 public class ArrayQuestion1
 {
 	public static void printArray(String[] a)
