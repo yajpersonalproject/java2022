@@ -14,7 +14,7 @@ public class Stack
 	
 	// public void push(Node newNode) OR
 	public void push(int d)
-	{
+	{	// the next 3 lines create a node with the argument of push (d)
 		Node newNode = new Node();
 		newNode.data = d;
 		newNode.next = null;

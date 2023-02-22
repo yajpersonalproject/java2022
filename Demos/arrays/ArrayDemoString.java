@@ -14,12 +14,17 @@ public class ArrayDemoString
 	 */
 	}
 	
+	public boolean isEmpty()
+	{
+		return lastIndex == 0;
+	}
+	
 	public static void printArray(String[] a)
 	{
-		System.out.print( "Start -->");
+		//System.out.print( "Start -->");
 		for(int i = 0; i < lastIndex; i++)
 		{
-			System.out.print( "  " + a[i]);
+			System.out.print( i + ":" + a[i] + "   ");
 		}
 		System.out.printf("\n\t[ %d elements in array ]\n", lastIndex);
 	}
@@ -29,7 +34,7 @@ public class ArrayDemoString
 		System.out.print( "Start -->");
 		for(int i = 0; i < a.length; i++)
 		{
-			System.out.print( "  " + a[i]);
+			System.out.print( i + ":" + a[i] + "   ");
 		}
 		System.out.println();
 	}
