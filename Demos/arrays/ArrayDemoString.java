@@ -47,7 +47,7 @@ public class ArrayDemoString
 			a[lastIndex] = data;
 			lastIndex++;
 		}
-		printWholeArray(a);
+		printArray(a);
 	}
 	
 	public static int search(String[] a, String data)
@@ -71,7 +71,7 @@ public class ArrayDemoString
 				a[i] = a[i+1];
 			}
 			lastIndex--;
-			printArray(a);
+			printWholeArray(a);
 		}
 	}
 	
@@ -87,13 +87,13 @@ public class ArrayDemoString
 			}
 			a[index] = data;
 		}
-		printArray(a);
+		printWholeArray(a);
 	}
 	
 	public static void main(String[] args)
 	{
 		String[] array = new String[MAXSIZE];
-		printArray(array);
+		printWholeArray(array);
 		String[] original = { "Bob", "Gale", "Ed", "Faye", "Ives", "Chuck", "Abe", "Dean", "StarLord", "Groot", "Steve", "Max" };
 		for(String x : original)
 		{	
