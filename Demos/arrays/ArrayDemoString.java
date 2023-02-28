@@ -50,6 +50,7 @@ public class ArrayDemoString
 		printArray(a);
 	}
 	
+	// page 260 Big Java LO, 6.3.5
 	public static int search(String[] a, String data)
 	{
 		for(int i = 0; i < lastIndex; i++)
@@ -60,12 +61,14 @@ public class ArrayDemoString
 		return -1;
 	}
 	
+	// page 260 Big Java LO, 6.3.5
 	public static void remove(String[] a, String data)
 	{
 		int indexToRemove = search(a, data);
 		if( indexToRemove == -1)
 		{	System.out.printf("%s not found.\n", data);
 		} else {
+			// this for loop copies all the elements below the element to remove one index UP
 			for(int i = indexToRemove; i < lastIndex-1; i++)
 			{
 				a[i] = a[i+1];
