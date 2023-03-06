@@ -5,11 +5,12 @@ public class Q3TestAQ
 	public static void printArray(double[] a)
 	{
 		for(int i = 0; i < a.length; i++)
-		{	System.out.println(i + " : " + a[i]);
+		{	System.out.printf("%.1f    ", a[i]);
 		}
+		System.out.println();
 	}
 	
-	public static double[] doIt(double[] inArray)
+	public static double[] calculateThreePointMovingAverage(double[] inArray)
 	{
 		int n = inArray.length;
 		double[] outArray = new double[n];
@@ -29,8 +30,8 @@ public class Q3TestAQ
 	public static void main (String[] args)
 	{
 		double[] data = { -2,2,4,3,0,-1 };
-		double[] d = doIt(data);
-		System.out.println();
+		double[] d = calculateThreePointMovingAverage(data);
+		System.out.println("\nResult:");
 		printArray(d);
 	}
 }
