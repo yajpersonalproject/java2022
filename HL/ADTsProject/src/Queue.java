@@ -20,15 +20,7 @@ public class Queue
 
     public void enQueue(int data)
     {
-        Node newNode = new Node(data);
-        if( isEmpty() )
-        {
-            head = newNode;
-        } else
-        {
-            tail.next = newNode;
-        }
-        tail = newNode;
+        
     }
 
     public int deQueue()
