@@ -36,7 +36,7 @@ public class Queue
         if (!isEmpty())
         {
             int d = head.data;
-            head  = head.next;
+            head = head.next;
             return d;
         } else
         {
@@ -51,7 +51,6 @@ public class Queue
         System.out.print("head -> ");
         while (temp != null)
         {
-            if(temp.next == null) System.out.print("tail -> ");
             System.out.print(temp.data);
             System.out.print(" -> ");
             temp = temp.next;
