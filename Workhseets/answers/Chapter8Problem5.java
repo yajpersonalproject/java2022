@@ -33,7 +33,8 @@ public class Chapter8Problem5
 		int sum		= 0;
 		for (int i = 1; i < 100; i++)
 			for (int j = i; j < 100; j++)
-				for (int k = j; k < 100; k++)	// GCD of 3 number = 1 kills factors
+				for (int k = j; k < 100; k++)
+					// GCD of 3 number = 1 kills factors
 					if ( good(i, j, k) && gcd(gcd(i, j), k)==1 )
 					{	System.out.printf("%4d %4d %4d\n", i, j, k);
 						counter ++;
