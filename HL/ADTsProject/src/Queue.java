@@ -11,6 +11,7 @@ public class Queue
 {
     Node head;
     Node tail;
+    int size = 0;
 
     public boolean isEmpty()
     {
@@ -29,6 +30,7 @@ public class Queue
             tail.next = newNode;
         }
         tail = newNode;
+        size++;
     }
 
     public int deQueue()
@@ -37,6 +39,7 @@ public class Queue
         {
             int d = head.data;
             head  = head.next;
+            size--;
             return d;
         } else
         {
@@ -56,7 +59,19 @@ public class Queue
             System.out.print(" -> ");
             temp = temp.next;
         }
-        System.out.println("NULL");
+        System.out.println("NULL. Size = " + size);
+    }
+
+    public int getSize()
+    {
+        Node temp = head;
+        int counter = 0;
+        while (temp != null)
+        {
+            counter++;
+            temp = temp.next;
+        }
+        return counter;
     }
 
 }
