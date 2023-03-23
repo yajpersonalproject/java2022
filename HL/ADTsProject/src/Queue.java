@@ -62,7 +62,7 @@ public class Queue
         System.out.println("NULL. Size = " + size);
     }
 
-    public int getSize()
+    public int size()
     {
         Node temp = head;
         int counter = 0;
