@@ -35,6 +35,7 @@ public class DenaryToBinary
         return bin;
     }
 
+
     public static String int2binString2(int n)
     {   // using Java's built-in Stack (from java.util.) note--it does not...
         // accept primitives, that's why we have to use the wrapper class...
@@ -64,5 +65,7 @@ public class DenaryToBinary
         System.out.println( "46 = " + int2binString(46) + " in binary");
 
         System.out.println( "46 = " + int2binString2(46) + " in binary");
+
+
     }
 }
