@@ -153,7 +153,7 @@ public class Q3PracticalAnswer
             }
     }
 
-	// puts data at index 'index' and moves the element @ index wherever there's room for it
+	// puts data at index 'index' and moves the element @ index wherever there's room for itx
     public static void insert(String[] a, String data, int index)
     {
 		if ((index < 0 || index >= MAXSIZE))
