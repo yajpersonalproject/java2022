@@ -1,6 +1,6 @@
 /*
  * Sorting algos in Java
- * 
+ *
  */
 
 
@@ -14,7 +14,7 @@ public class SortingAlgos
 		}
 		System.out.println();
 	}
-	
+
 	public static int[] clone(int[] a)
 	{
 		int[] x = new int[a.length];
@@ -23,7 +23,7 @@ public class SortingAlgos
 		}
 		return x;
 	}
-	
+
 	public static void selectionSort(int[] a)
 	{
 		int currentIndex = 0;
@@ -31,15 +31,15 @@ public class SortingAlgos
 		{
 			int smallestIndex = currentIndex;
 			int smallestValue = a[smallestIndex];
-			int j = smallestIndex + 1;
-			while( j < a.length )
+			int checkIndex	  = smallestIndex + 1;
+			while( checkIndex < a.length )
 			{
-				if(a[j] < smallestValue)
+				if(a[checkIndex] < smallestValue)
 				{
-					smallestIndex = j;
-					smallestValue = a[j];
+					smallestIndex = checkIndex;
+					smallestValue = a[checkIndex];
 				}
-				j++;
+				checkIndex++;
 			}
 			a[smallestIndex] = a[currentIndex];
 			a[currentIndex] = smallestValue;
@@ -48,17 +48,17 @@ public class SortingAlgos
 			printArray(a);
 		}
 	}
-	
+
 	public static void bubbleSort(int[] a)
 	{
 		// finish this for homework. Refer to sorting_algos_SL.pdf
 	}
-	
+
 	public static void insertionSort(int[] a)
 	{
 		// To be done in class. Refer to sorting_algos_SL.pdf
 	}
-	
+
 	public static void main (String[] args)
 	{
 		int[] original = { 12, 7, 14, 9, 5, 3 };
@@ -81,4 +81,3 @@ public class SortingAlgos
 		printArray(insert);
 	}
 }
-
