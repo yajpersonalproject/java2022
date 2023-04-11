@@ -66,6 +66,11 @@ public class DenaryToBinary
 
         System.out.println( "46 = " + int2binString2(46) + " in binary");
 
-
+        Stack<String> namesStack = new Stack<>();
+        namesStack.push("Anna"); namesStack.push("Dani");
+        namesStack.push("Juan");namesStack.push("Esteban");
+        namesStack.push("Pepe");
+        System.out.println( namesStack );
+        System.out.println(namesStack.size());
     }
 }
