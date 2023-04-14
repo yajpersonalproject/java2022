@@ -65,13 +65,21 @@ public class DenaryToBinary
 
         System.out.println( "46 = " + int2binString(46) + " in binary");
 
+
         System.out.println( "46 = " + int2binString2(46) + " in binary");
 
+        System.out.println("\nAnother example of stacks in Java\nPushing...");
         Stack<String> namesStack = new Stack<>();
         namesStack.push("Anna"); namesStack.push("Dani");
-        namesStack.push("Juan");namesStack.push("Esteban");
+        namesStack.push("Juan"); namesStack.push("Esteban");
         namesStack.push("Pepe");
         System.out.println( namesStack );
-        System.out.println(namesStack.size());
+        System.out.println( "Stack size = " + namesStack.size() );
+        System.out.println("Popping...");
+        while(namesStack.iterator().hasNext())
+        // in exams, you would write the line above as namesStack.hasNext() //
+        {
+            System.out.print( namesStack.pop() + " " );
+        }
     }
 }
