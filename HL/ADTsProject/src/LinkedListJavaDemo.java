@@ -45,6 +45,7 @@ public class LinkedListJavaDemo
         }
         //System.out.println(list.size());
         int size = 0;
+        // in IB JETS, list.hasNext()
         while( list.iterator().hasNext() )
         {
             //  = list.getNext()
