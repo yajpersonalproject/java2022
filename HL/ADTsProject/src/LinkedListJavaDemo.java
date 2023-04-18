@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -36,7 +37,6 @@ public class LinkedListJavaDemo
     {
         Scanner in = new Scanner(System.in);
         LinkedList<String> list = new LinkedList<>();
-        LinkedList<String> backup = new LinkedList<>();
         for(int i = 0; i < 5; i++)
         {
             System.out.print("Enter a string = ");
@@ -46,17 +46,18 @@ public class LinkedListJavaDemo
         //System.out.println(list.size());
         int size = 0;
         // in IB JETS, list.hasNext()
-        while( list.iterator().hasNext() )
+        Iterator<String> iterator = list.iterator();
+        while( iterator.hasNext() )
         {
             //  = list.getNext()
-            backup.add(list.remove());
+            iterator.next();
             size++;
         }
         System.out.println("List size = " + size);
         String[] sArray = new String[size];
         for(int i = 0; i < size; i++)
         {
-            sArray[i] = backup.remove();
+            sArray[i] = list.remove();
         }
         bubbleSort(sArray);
         for(int i = 0; i < size; i++)
