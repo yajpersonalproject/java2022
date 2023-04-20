@@ -60,7 +60,7 @@ public class ArraysFormative
 
 		System.out.println( "Minimum: " + min(data) );
 		System.out.println( "Maximum: " + max(data) );
-		System.out.println( "Range  : " + range(data );
+		System.out.println( "Range  : " + range(data ));
 		System.out.println( "Mean   : " + mean(data) );
 		System.out.println( "Median : " + median(data) );
 		System.out.println( "Mode   : " + mode(data) );
