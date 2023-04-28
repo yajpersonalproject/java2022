@@ -2,9 +2,9 @@ public class LinkedList
 {
     Node start;
 
-    public LinkedList() { }
+    public LinkedList() { } // creates an empty LL
 
-    public LinkedList(int data)
+    public LinkedList(int data) // creates a LL with a starting node
     {
         Node newNode = new Node(data);
         newNode.next = null;
@@ -25,7 +25,7 @@ public class LinkedList
             return;
         }
         Node temp = start;
-        while(temp.hasNext())
+        while(temp.hasNext()) // or while(temp.next != null)
         {
             temp = temp.next;
         }
@@ -44,17 +44,5 @@ public class LinkedList
         System.out.println();
     }
 
-    public static void main(String[] args)
-    {
-        LinkedList list = new LinkedList(5);
-        list.append(7);
-        list.append(3);
-        list.printLinkedList();
 
-        LinkedList list2 = new LinkedList();
-        list2.append(1);
-        list2.append(5);
-        list2.append(2);
-        list2.printLinkedList();
-    }
 }
