@@ -92,9 +92,9 @@ public class SortingAlgos
 			{	c++;
 				array[j+1] = array[j];
 				j--;
+				System.out.print("\t>>> ");	printArray(array);
 			}
 			array[j+1] = temp;
-			System.out.print("\t>>> ");	printArray(array);
 		}
 		System.out.println("Comparisons: " + c);
 	}
