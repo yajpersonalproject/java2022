@@ -10,7 +10,7 @@ public class SortingAlgosString
 	{
 		for(int i = 0; i < a.length; i++)
 		{
-			System.out.printf( "[%d]%-7s  ",i , a[i]);
+			System.out.printf( "[%d]%-6s  ",i , a[i]);
 		}
 		System.out.println();
 	}
@@ -147,8 +147,11 @@ public static void bubbleSort2(String[] a)
 
 	public static void main (String[] args)
 	{
+		String[] original = { "Kyle", "Anne", "Cyan", "Maggie", "Zeke", "Lisa" };
+		// for additional discussion and testing purposes:
 		//String[] original = { "12", "7", "14", "9", "5", "3" };
-		String[] original = { "Kyle", "Anne", "Cynthia", "Maggie", "Zeke", "Lisa" };
+		//String[] original = {"Anne", "Cyan", "Kyle", "Lisa", "Maggie", "Zeke"};
+		//String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
 		String[] selection = clone(original);
 		String[] bubble = clone(original);
 		String[] bubble2 = clone(original);
