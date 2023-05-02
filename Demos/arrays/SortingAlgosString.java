@@ -10,7 +10,7 @@ public class SortingAlgosString
 	{
 		for(int i = 0; i < a.length; i++)
 		{
-			System.out.printf( "[%d]%s  ",i , a[i]);
+			System.out.printf( "[%d]%-7s  ",i , a[i]);
 		}
 		System.out.println();
 	}
@@ -71,9 +71,10 @@ public class SortingAlgosString
 					a[i+1]=temp;
 					swapped=true; // and keep track of the fact that we've done a swap
 				}
-				System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
 			}
 			sorted++; // after each pass, one more element will be sorted
+			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
@@ -93,9 +94,10 @@ public static void bubbleSort2(String[] a)
 					a[i]=a[i+1];
 					a[i+1]=temp;
 				}
-				System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
 			}
 			sorted++; // after each pass, one more element will be sorted
+			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
@@ -103,22 +105,21 @@ public static void bubbleSort2(String[] a)
 	public static void bubbleSort3(String[] a)
 	{
 		// finish this for homework. Refer to sorting_algos_SL.pdf
-		boolean swapped = true;
 		int c = 0; // counting how how many times the sorting algo. works (compares elements inside the array)
-		for(int j = 0; j < a.length; j++)
+		for(int i = 0; i < a.length; i++)
 		{
-			for(int i = 0; i < a.length-1; i++) // go through the unsorted part of the array (a pass)
+			for(int j = 0; j < a.length-1; j++) // go through the unsorted part of the array (a pass)
 			{
 				c++;
-				if(a[i].compareTo(a[i+1]) > 0) // if the elements are not in order (ascending)
+				if(a[j].compareTo(a[j+1]) > 0) // if the elements are not in order (ascending)
 				{
-					String temp = a[i]; // swap the two elements
-					a[i]=a[i+1];
-					a[i+1]=temp;
-					swapped=true; // and keep track of the fact that we've done a swap
+					String temp = a[j]; // swap the two elements
+					a[j]=a[j+1];
+					a[j+1]=temp;
 				}
-				System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
 			}
+			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
@@ -147,7 +148,7 @@ public static void bubbleSort2(String[] a)
 	public static void main (String[] args)
 	{
 		//String[] original = { "12", "7", "14", "9", "5", "3" };
-		String[] original = { "Anne", "Cynthia", "Kyle", "Lisa", "Maggie", "Zeke" };
+		String[] original = { "Kyle", "Anne", "Cynthia", "Maggie", "Zeke", "Lisa" };
 		String[] selection = clone(original);
 		String[] bubble = clone(original);
 		String[] bubble2 = clone(original);
@@ -159,18 +160,26 @@ public static void bubbleSort2(String[] a)
 		selectionSort(selection);
 		System.out.println("\nFinal result:");
 		printArray(selection);
-		System.out.println("\nBubble sort:");
+		System.out.println("\nOriginal array:");
+		printArray(original);
+		System.out.println("\nBubble (fully optimised) sort:");
 		bubbleSort(bubble);
 		System.out.println("\nFinal result:");
 		printArray(bubble);
-		System.out.println("\nBubble2 sort:");
-		bubbleSort(bubble2);
+		System.out.println("\nOriginal array:");
+		printArray(original);
+		System.out.println("\nBubble2 (partially optimised) sort:");
+		bubbleSort2(bubble2);
 		System.out.println("\nFinal result:");
 		printArray(bubble2);
-		System.out.println("\nBubble3 sort:");
-		bubbleSort(bubble3);
+		System.out.println("\nOriginal array:");
+		printArray(original);
+		System.out.println("\nBubble3 (unoptimised) sort:");
+		bubbleSort3(bubble3);
 		System.out.println("\nFinal result:");
 		printArray(bubble3);
+		System.out.println("\nOriginal array:");
+		printArray(original);
 		System.out.println("\nInsertion sort:");
 		insertionSort(insert);
 		System.out.println("\nFinal result:");
