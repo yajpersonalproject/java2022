@@ -149,6 +149,7 @@ public static void bubbleSort2(String[] a)
 	{
 		String[] original = { "Kyle", "Anne", "Cyan", "Maggie", "Zeke", "Lisa" };
 		// for additional discussion and testing purposes:
+		//int[] original = { 12, 7, 14, 9, 5, 3 };
 		//String[] original = { "12", "7", "14", "9", "5", "3" };
 		//String[] original = {"Anne", "Cyan", "Kyle", "Lisa", "Maggie", "Zeke"};
 		//String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
