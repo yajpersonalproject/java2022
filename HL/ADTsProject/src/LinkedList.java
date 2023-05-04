@@ -32,6 +32,33 @@ public class LinkedList
         temp.next = newNode;
     }
 
+    public boolean delete(int dataToDelete)
+    {
+        if(isEmpty())
+        {
+            System.out.println("Error-linked list is empty");
+            return false;
+        }
+        if(start.data == dataToDelete)
+        {
+            start = start.next;
+            return true;
+        }
+        Node prev = start;
+        Node current = start.next;
+        while(current != null)
+        {
+            if(current.data == dataToDelete)
+            {
+                prev.next = current.next;
+                return true;
+            }
+            prev = prev.next;
+            current = current.next;
+        }
+        return false;
+    }
+
     public void printLinkedList()
     {
         Node temp = start;
@@ -41,7 +68,7 @@ public class LinkedList
             System.out.print(" -> " + temp.data);
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println(" -> null");
     }
 
 
