@@ -147,12 +147,12 @@ public static void bubbleSort2(String[] a)
 
 	public static void main (String[] args)
 	{
-		String[] original = { "Kyle", "Anne", "Cyan", "Maggie", "Zeke", "Lisa" };
+		//String[] original = { "Kyle", "Anne", "Cyan", "Maggie", "Zeke", "Lisa" };
 		// for additional discussion and testing purposes:
 		//int[] original = { 12, 7, 14, 9, 5, 3 };
 		//String[] original = { "12", "7", "14", "9", "5", "3" };
 		//String[] original = {"Anne", "Cyan", "Kyle", "Lisa", "Maggie", "Zeke"};
-		//String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
+		String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
 		String[] selection = clone(original);
 		String[] bubble = clone(original);
 		String[] bubble2 = clone(original);
