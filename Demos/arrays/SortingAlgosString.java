@@ -27,8 +27,9 @@ public class SortingAlgosString
 	public static void selectionSort(String[] a)
 	{
 		int c = 0;
-		int currentIndex = 0;
-		while( currentIndex < a.length - 1 )
+		/*int currentIndex = 0;
+		while( currentIndex < a.length - 1 ) */
+		for(int currentIndex = 0; currentIndex < a.length - 1; currentIndex++)
 		{
 			int smallestIndex = currentIndex;
 			String smallestValue = a[smallestIndex];
@@ -45,9 +46,9 @@ public class SortingAlgosString
 			}
 			a[smallestIndex] = a[currentIndex];
 			a[currentIndex] = smallestValue;
-			currentIndex++;
-			System.out.print("\t");
-			printArray(a);
+			//currentIndex++; // because it's already in the for loop
+			// line below--optional, shows how the array changes with each swap
+			System.out.print("\t"); printArray(a);
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
@@ -71,15 +72,15 @@ public class SortingAlgosString
 					a[i+1]=temp;
 					swapped=true; // and keep track of the fact that we've done a swap
 				}
-				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				System.out.print("\t>>> i=" + i + " "); printArray(a); // optional, shows how the array changes with each swap
 			}
 			sorted++; // after each pass, one more element will be sorted
-			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
+			//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
 
-public static void bubbleSort2(String[] a)
+	public static void bubbleSort2(String[] a)
 	{
 		int c = 0; // counting how how many times the sorting algo. works (compares elements inside the array)
 		int sorted = 0; // how many elements we have sorted/bubbled up
@@ -94,17 +95,16 @@ public static void bubbleSort2(String[] a)
 					a[i]=a[i+1];
 					a[i+1]=temp;
 				}
-				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				System.out.print("\t>>> i=" + i + " "); printArray(a); // optional, shows how the array changes with each swap
 			}
 			sorted++; // after each pass, one more element will be sorted
-			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
+			//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
 	
 	public static void bubbleSort3(String[] a)
 	{
-		// finish this for homework. Refer to sorting_algos_SL.pdf
 		int c = 0; // counting how how many times the sorting algo. works (compares elements inside the array)
 		for(int i = 0; i < a.length; i++)
 		{
@@ -117,9 +117,9 @@ public static void bubbleSort2(String[] a)
 					a[j]=a[j+1];
 					a[j+1]=temp;
 				}
-				//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each swap
+				System.out.print("\t>>> j=" + j + " "); printArray(a); // optional, shows how the array changes with each swap
 			}
-			System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
+			//System.out.print("\t"); printArray(a); // optional, shows how the array changes with each pass
 		}
 		System.out.println("Number of comparisons made: " + c);
 	}
@@ -152,7 +152,8 @@ public static void bubbleSort2(String[] a)
 		//int[] original = { 12, 7, 14, 9, 5, 3 };
 		//String[] original = { "12", "7", "14", "9", "5", "3" };
 		//String[] original = {"Anne", "Cyan", "Kyle", "Lisa", "Maggie", "Zeke"};
-		String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
+		//String[] original = {"Zeke", "Maggie", "Lisa", "Kyle", "Cyan", "Anne"};
+		String[] original = { "Robert", "Boris", "Brad", "George", "David" }; // from our arrays practice #1 - tracing our sorting algos with that example, too
 		String[] selection = clone(original);
 		String[] bubble = clone(original);
 		String[] bubble2 = clone(original);
