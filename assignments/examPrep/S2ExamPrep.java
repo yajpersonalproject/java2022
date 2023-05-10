@@ -11,7 +11,30 @@
 public class S2ExamPrep
 {
 	// write your methods here
-
+	public boolean isPrime(int n)
+	{
+		
+	}
+	
+	public static int count(int[] array)
+	{
+		
+	}
+	
+	public static int largest(int[] array)
+	{
+		
+	}
+	
+	public static int smallest(int[] array)
+	{
+		
+	}
+	
+	public static double average(int[] array)
+	{
+		
+	}
 
 	public static void main (String[] args)
 	{
