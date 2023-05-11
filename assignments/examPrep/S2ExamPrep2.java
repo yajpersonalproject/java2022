@@ -5,12 +5,12 @@
  * 2.	Write a method that will find the largest and smallest prime in the random array.
  * 3.	Write a method to calculate the average of all the primes found in the random array.
  * 
- * This is the mandalorian way. This is the way.
+ * This is the long-winded, less recommended way
  * 
  */
 
 
-public class S2ExamPrep
+public class S2ExamPrep2
 {
 	// this array is global so that you may it them in any of your methods easily
 	static int[] primes = { 2, 3, 5, 7 };
@@ -31,24 +31,29 @@ public class S2ExamPrep
 		int counter = 0;
 		for(int i = 0; i < array.length; i++)
 		{
-			if(isPrime(array[i]))
-				counter++;
+			for(int j = 0; j < primes.length; j++)
+			{
+				if(array[i] == primes[j])
+					counter++;
+			}
 		}
 		return counter;
 	}
-
+	
 	public static int largest(int[] array)
 	{
-		int max = primes[primes.length-1]; // this assumes that the primes array is sorted in ascending order
+		int max = primes[primes.length-1];
 		for(int i = 1; i < array.length; i++)
 		{
-			int number = array[i];
-			if(isPrime(number) && number > max)
-				max = number;
+			for(int j = 0; j < primes.length; j++)
+			{
+				if(array[i] == primes[j])
+					if(array[i] > max)
+						max = array[i];
+			}
 		}
 		return max;
 	}
-
 /*	
 	public static int smallest(int[] array)
 	{
