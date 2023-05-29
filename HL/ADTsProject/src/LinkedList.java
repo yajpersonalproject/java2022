@@ -1,14 +1,19 @@
 public class LinkedList
 {
     Node start;
-
-    public LinkedList() { } // creates an empty LL
+    int size;
+    public LinkedList()
+    {
+        start = null;
+        size = 0;
+    } // creates an empty LL
 
     public LinkedList(int data) // creates a LL with a starting node
     {
         Node newNode = new Node(data);
         newNode.next = null;
         start = newNode;
+        size = 1;
     }
 
     public boolean isEmpty()
@@ -22,6 +27,7 @@ public class LinkedList
         if( isEmpty() )
         {
             start = newNode;
+            size = 1;
             return;
         }
         Node temp = start;
@@ -30,6 +36,7 @@ public class LinkedList
             temp = temp.next;
         }
         temp.next = newNode;
+        size++;
     }
 
     public boolean delete(int dataToDelete)
@@ -42,6 +49,7 @@ public class LinkedList
         if(start.data == dataToDelete)
         {
             start = start.next;
+            size--;
             return true;
         }
         Node prev = start;
@@ -51,6 +59,7 @@ public class LinkedList
             if(current.data == dataToDelete)
             {
                 prev.next = current.next;
+                size--;
                 return true;
             }
             prev = prev.next;
@@ -59,6 +68,11 @@ public class LinkedList
         return false;
     }
 
+    public void deleteAt(int index)
+    {
+
+        size--;
+    }
     public void printLinkedList()
     {
         Node temp = start;
@@ -68,7 +82,7 @@ public class LinkedList
             System.out.print(" -> " + temp.data);
             temp = temp.next;
         }
-        System.out.println(" -> null");
+        System.out.println(" -> null\tsize: " + size);
     }
 
 
