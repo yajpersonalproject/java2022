@@ -2,6 +2,7 @@ public class LinkedList
 {
     Node start;
     int size;
+
     public LinkedList()
     {
         start = null;
@@ -24,14 +25,14 @@ public class LinkedList
     public void append(int data)
     {
         Node newNode = new Node(data);
-        if( isEmpty() )
+        if (isEmpty())
         {
             start = newNode;
             size = 1;
             return;
         }
         Node temp = start;
-        while(temp.hasNext()) // or while(temp.next != null)
+        while (temp.hasNext()) // or while(temp.next != null)
         {
             temp = temp.next;
         }
@@ -41,12 +42,12 @@ public class LinkedList
 
     public boolean delete(int dataToDelete)
     {
-        if(isEmpty())
+        if (isEmpty())
         {
             System.out.println("Error-linked list is empty");
             return false;
         }
-        if(start.data == dataToDelete)
+        if (start.data == dataToDelete)
         {
             start = start.next;
             size--;
@@ -54,9 +55,9 @@ public class LinkedList
         }
         Node prev = start;
         Node current = start.next;
-        while(current != null)
+        while (current != null)
         {
-            if(current.data == dataToDelete)
+            if (current.data == dataToDelete)
             {
                 prev.next = current.next;
                 size--;
@@ -73,11 +74,12 @@ public class LinkedList
 
         size--;
     }
+
     public void printLinkedList()
     {
         Node temp = start;
         System.out.print("start");
-        while(temp != null)
+        while (temp != null)
         {
             System.out.print(" -> " + temp.data);
             temp = temp.next;
@@ -85,5 +87,35 @@ public class LinkedList
         System.out.println(" -> null\tsize: " + size);
     }
 
+    private void insert(int data, int place)
+    {
+        Node newNode = new Node(data);
+        if (isEmpty())
+        {
+            start = newNode;
+            size = 1;
+            return;
+        }
+        Node temp = start;
+        int counter = 1;
+        while (counter < place)
+        {
+            temp = temp.next;
+            counter++;
 
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+        size++;
+    }
+
+    public void insertBefore(int data, int place)
+    {
+        insert(data, place - 1);
+    }
+
+    public void insertAfter(int data, int place)
+    {
+        insert(data, place);
+    }
 }

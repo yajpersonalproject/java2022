@@ -5,6 +5,8 @@ public class LinkedListDemo
         LinkedList list = new LinkedList(5);
         list.append(7);
         list.append(3);
+
+
         list.printLinkedList();
 
         LinkedList list2 = new LinkedList();
@@ -18,5 +20,9 @@ public class LinkedListDemo
         list2.delete(1); list2.printLinkedList();
         list2.delete(2); list2.printLinkedList();
         list2.delete(0); list2.printLinkedList();
+
+        list.insertBefore(1,2); list.printLinkedList();
+        list.insertAfter(2,2); list.printLinkedList();
     }
 }
+
