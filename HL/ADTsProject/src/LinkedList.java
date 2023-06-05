@@ -69,10 +69,39 @@ public class LinkedList
         return false;
     }
 
-    public void deleteAt(int index)
+    public int deleteAt(int place)
     {
-
-        size--;
+        if (isEmpty())
+        {
+            System.out.println("Error-linked list is empty");
+            return 0;
+        }
+        Node temp = start;
+        int counter = 0;
+        int delData = 0;
+        place = Math.abs(place); // no negatives
+        /* redundant! why?
+        if( place == 0 )
+        {
+            delData = start.data;
+            start = start.next;
+            size--;
+            return delData;
+        }
+        */
+        while(counter < size)
+        {
+            if(counter == place)
+            {
+                delData = temp.data;
+                temp = temp.next;
+                size--;
+                break;
+            }
+            temp = temp.next;
+            counter++;
+        }
+        return delData;
     }
 
     public void printLinkedList()
@@ -87,7 +116,7 @@ public class LinkedList
         System.out.println(" -> null\tsize: " + size);
     }
 
-    private void insert(int data, int place)
+    private void insertAt(int data, int place)
     {
         Node newNode = new Node(data);
         if (isEmpty())
@@ -102,7 +131,6 @@ public class LinkedList
         {
             temp = temp.next;
             counter++;
-
         }
         newNode.next = temp.next;
         temp.next = newNode;
@@ -111,11 +139,29 @@ public class LinkedList
 
     public void insertBefore(int data, int place)
     {
-        insert(data, place - 1);
+        insertAt(data, place - 1);
     }
 
     public void insertAfter(int data, int place)
     {
-        insert(data, place);
+        insertAt(data, place);
     }
+
+    // insert after a value in the LL
+    public void insert(Node newNode, Node key)
+    {
+        Node temp = start;
+        while(temp.next != null)
+        {
+            if(temp.data == key.data)
+            {
+                break;
+            }
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+        size++;
+    }
+
 }
