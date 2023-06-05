@@ -1,4 +1,5 @@
 // http://www.mathsisfun.com/algebra/matrix-introduction.html
+// https://matrixcalc.org/  to check your results
 
 import java.util.Scanner;
 
@@ -26,19 +27,19 @@ public class Matrices
         int rB = B.length;		// number of rows, matrix B
         int cB = B[0].length;	// number of columns, matrix B
         double[][] C = new double[rA][cB];
-        if (rA != cB)
+        if (cA != rB)
         {
             System.out.println("Can't multiply matrices - wrong dimensions.");
         }
         else
         {
-			for (int i = 0; i < mA; i++)
+			for (int i = 0; i < rA; i++) // process each row of A
 			{
-				for (int j = 0; j < nB; j++)
+				for (int j = 0; j < cB; j++) // process each column of B
 				{
-					for (int k = 0; k < nA; k++)
+					for (int k = 0; k < rB; k++) // process each number on B's column
 					{
-						C[i][j] += A[i][k] * B[k][j];
+						C[i][j] = C[i][j] + (A[i][k] * B[k][j]);
 					}
 				}
 			}
@@ -88,6 +89,7 @@ public class Matrices
 		System.out.print("Enter Number of columns for matrix A: ");
 		int cA = input.nextInt();
 		double[][] A = create(rA, cA);
+		System.out.println("A =");
 		printArray(A);
         System.out.println();
 		
@@ -96,9 +98,11 @@ public class Matrices
 		System.out.print("Enter Number of columns for matrix B: ");
 		int cB = input.nextInt();
 		double[][] B = create(rB, cB);
+		System.out.println("B =");
         printArray(B);
         System.out.println();
         
+        System.out.println("A x B =");
         double[][] P = multiply(A, B);
         printArray(P);
 /*      
