@@ -1,25 +1,33 @@
-// http://www.mathsisfun.com/algebra/matrix-introduction.html
-// https://matrixcalc.org/  to check your results
+/* 
+ * Challenge/assignment:	complete the identity, add and subtract methods to perform their
+ * 							their respective operations on matrices
+ * 
+ * http://www.mathsisfun.com/algebra/matrix-introduction.html
+ * http://www.purplemath.com/modules/matrices.htm
+ * http://www.purplemath.com/modules/mtrxmult.htm
+ * https://matrixcalc.org/  to check your results
+ * 
+ */
 
 import java.util.Scanner;
 
 public class Matrices
 {
 
-    // return n-by-n identity matrix I
+    // returns the n-by-n identity matrix I
     //public static double[][] identity(int n)
     
-	// return transposed matrix A
+	// returns transposed matrix A
     //public static double[][] transpose(double[][] A)
 
-    // return C = A + B
+    // returns C = A + B
     //public static double[][] add(double[][] A, double[][] B)
 
-    // return C = A - B
+    // returns C = A - B
 	//public static double[][] subtract(double[][] A, double[][] B)
 
 
-    // return C = A * B
+    // returns C = A * B
 	public static double[][] multiply(double[][] A, double[][] B)
     {
         int rA = A.length;		// number of rows, matrix A
@@ -27,7 +35,7 @@ public class Matrices
         int rB = B.length;		// number of rows, matrix B
         int cB = B[0].length;	// number of columns, matrix B
         double[][] C = new double[rA][cB];
-        if (cA != rB)
+        if (cA != rB)			// B's rows must equal A's columns
         {
             System.out.println("Can't multiply matrices - wrong dimensions.");
         }
@@ -37,9 +45,9 @@ public class Matrices
 			{
 				for (int j = 0; j < cB; j++) // process each column of B
 				{
-					for (int k = 0; k < rB; k++) // process each number on B's column
+					for (int k = 0; k < rB; k++) // process each number on B's column j
 					{
-						C[i][j] = C[i][j] + (A[i][k] * B[k][j]);
+						C[i][j] = C[i][j] + ( A[i][k] * B[k][j] );
 					}
 				}
 			}
@@ -51,7 +59,7 @@ public class Matrices
     public static void printArray(double[][] A)
     {
         int rows = A.length;		// number of rows
-        int cols = A[0].length;	// number of columns
+        int cols = A[0].length;		// number of columns
 
         for (int i = 0; i < rows; i++)
         {
