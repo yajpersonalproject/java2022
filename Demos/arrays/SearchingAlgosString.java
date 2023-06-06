@@ -66,6 +66,31 @@ public class SearchingAlgosString
 		System.out.print(c);
 		return index;
 	}
+	
+	public static int binarySearchRecursive(String[] array, String key, int lower, int upper)
+	{
+		//System.out.println("\t\tlower index: " + lower + " upper index: " + upper + " midpoint: "+ (lower+upper)/2 );
+		if( lower <= upper )
+		{
+			int mid = (lower + upper) / 2;
+			System.out.println("\t\tL:" + lower + " U:" + upper + " M:"+ mid);
+			if( array[mid].equalsIgnoreCase(key) )
+			{	return mid; // key found, exit while loop/stop searching
+			} else if( key.compareToIgnoreCase(array[mid]) < 0 )
+			{	return binarySearchRecursive(array, key, lower, mid - 1);
+			} else if( key.compareToIgnoreCase(array[mid]) > 0 ) // this could also be a plain else
+			{	return binarySearchRecursive(array, key, mid + 1, upper);
+			}
+			
+		}
+		return -1; // key not found
+	}
+	
+	// wrapper method to call the binarySearchRecursive(array, key, lower, upper)
+	public static int binarySearchRecursive(String[] array, String key)
+	{
+		return binarySearchRecursive(array, key, 0, array.length-1);
+	}
 
 	// a couple of ways to visualise the insertion sort:
 	// https://youtu.be/OGzPmgsI-pQ
@@ -122,5 +147,17 @@ public class SearchingAlgosString
 			binarySearch(sorted, "zeke") );
 		System.out.println("\tbinarySearch(\"Anne\") = " +
 			binarySearch(sorted, "Anne") );
+			
+		System.out.println("\nBinary search recuersive on the sorted array:");
+		System.out.println("\tbinarySearchRecursive(\"John\") = " +
+			binarySearchRecursive(sorted, "John") );
+		System.out.println("\tbinarySearchRecursive(\"lisa\") = " +
+			binarySearchRecursive(sorted, "lisa") );
+		System.out.println("\tbinarySearchRecursive(\"kylE\") = " +
+			binarySearchRecursive(sorted, "kylE") );
+		System.out.println("\tbinarySearchRecursive(\"zeke\") = " +
+			binarySearchRecursive(sorted, "zeke") );
+		System.out.println("\tbinarySearchRecursive(\"Anne\") = " +
+			binarySearchRecursive(sorted, "Anne") );
 	}
 }
