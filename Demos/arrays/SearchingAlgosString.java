@@ -1,7 +1,8 @@
-/*
- * Searching algos in Java
- * String version
- */
+/*****************************
+ *  Searching algos in Java  *
+ *  String version, v2.0 +r  *
+ *  mrdv 2023                *
+ *****************************/
 
 
 public class SearchingAlgosString
@@ -24,6 +25,7 @@ public class SearchingAlgosString
 		return x;
 	}
 
+	// https://www.geeksforgeeks.org/linear-search/
 	public static int linearSearch(String[] a, String key)
 	{
 		int c = 0;
@@ -41,6 +43,7 @@ public class SearchingAlgosString
 	}
 
 	// https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm
+	// https://www.geeksforgeeks.org/binary-search/
 	public static int binarySearch(String[] array, String key)
 	{
 		int c = 0;
@@ -67,6 +70,7 @@ public class SearchingAlgosString
 		return index;
 	}
 	
+	// https://www.geeksforgeeks.org/binary-search/		go to point #2
 	public static int binarySearchRecursive(String[] array, String key, int lower, int upper)
 	{
 		//System.out.println("\t\tlower index: " + lower + " upper index: " + upper + " midpoint: "+ (lower+upper)/2 );
@@ -81,12 +85,11 @@ public class SearchingAlgosString
 			} else if( key.compareToIgnoreCase(array[mid]) > 0 ) // this could also be a plain else
 			{	return binarySearchRecursive(array, key, mid + 1, upper);
 			}
-			
 		}
 		return -1; // key not found
 	}
 	
-	// wrapper method to call the binarySearchRecursive(array, key, lower, upper)
+	// wrapper method to call the binarySearchRecursive(array, key, lower, upper) with less parameters
 	public static int binarySearchRecursive(String[] array, String key)
 	{
 		return binarySearchRecursive(array, key, 0, array.length-1);
