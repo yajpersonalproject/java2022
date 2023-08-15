@@ -1,5 +1,7 @@
 public class Animal
 {
+    // class (static) variable
+    private static int currentYear = 2023;
     // attributes/fields/instance variables
     private String name;
     private int birthYear;
@@ -28,6 +30,11 @@ public class Animal
     public int getBirthYear()
     {
         return birthYear;
+    }
+
+    public int getAge()
+    {
+        return currentYear - birthYear;
     }
 
     // mutator/modifier methods
