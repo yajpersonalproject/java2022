@@ -1,11 +1,12 @@
 public class Animal
 {
-    // class (static) variable
+    // class (static) variable; 1 copy only, bound to the Animal class
     private static int currentYear = 2023;
-    // attributes/fields/instance variables
+
+    // attributes/fields/instance variables; one copy per instance/Java object
     private String name;
     private int birthYear;
-    // private = data hiding
+    // private=data hiding; prevent access from any other class other than Animal
 
     // (custom) constructor method
     public Animal(String name, int birthYear)
@@ -14,11 +15,11 @@ public class Animal
         this.birthYear = birthYear;
     }
 
-    // overloading the constructor
+    // overloading the constructor; if no bY is given, assume it's the current one
     public Animal(String name)
     {
         this.name = name;
-        birthYear = 0;
+        birthYear = currentYear;
     }
 
     // accessor method aka "getters"
@@ -49,4 +50,25 @@ public class Animal
         this.birthYear = year;
     }
     */
+
+    // https://en.wikipedia.org/wiki/List_of_animal_sounds
+    public void talk()
+    {
+        System.out.println("Animals don't talk!");
+    }
+
+    public void eat()
+    {
+        System.out.println(getClass().getName() + " eats food.");
+    }
+
+    public String toString()
+    {
+        String output =
+                "Name: " + this.name + "  |  " + "Age: " + this.getAge();
+        return output;
+        // also
+        // return "Name: " + this.name + "    " + "Age: " + this.getAge();
+    }
+
 }

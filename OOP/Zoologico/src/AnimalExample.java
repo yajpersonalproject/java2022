@@ -2,14 +2,14 @@ public class AnimalExample
 {
     public static void main(String[] args)
     {
-        // new calls the constructor and instantiates ahMeng
-        // the parameters initialise its attributes
+        // NEW calls the constructor and instantiates ahMeng
+        // the parameters initialise the object's (ahMeng's) attributes
         Animal ahMeng = new Animal("Ah Meng", 1990);
-        System.out.println(ahMeng);
-        System.out.print("Name: " + ahMeng.getName() + "\t\t");
-        System.out.println("Birth Year: " + ahMeng.getBirthYear());
-        ahMeng.setName("Bob");
-        System.out.print("Name: " + ahMeng.getName() + "\t\t");
-        System.out.println("Birth Year: " + ahMeng.getBirthYear());
+
+        System.out.println(ahMeng); // default output: Animal@75bd9247
+        System.out.print(ahMeng.getName() + "was born  " + ahMeng.getBirthYear());
+        ahMeng.setName("Bob"); // a setter allows us to modify an attribute
+        System.out.printf( "Name: %-10s | Birth Year: %4d\n",
+                ahMeng.getName(), ahMeng.getBirthYear() );
     }
 }
