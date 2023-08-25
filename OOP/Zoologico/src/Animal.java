@@ -54,18 +54,18 @@ public class Animal
     // https://en.wikipedia.org/wiki/List_of_animal_sounds
     public void talk()
     {
-        System.out.println(getClass().getName() + " don't talk!");
+        System.out.println(this.getName() + " don't talk!");
     }
 
     public void eat()
     {
-        System.out.println(getClass().getName() + " eats food.");
+        System.out.println(getName() + " eats food.");
     }
 
     public String toString()
     {
-        String output =
-                "Name: " + this.name + "  |  " + "Age: " + this.getAge();
+        String output = "Class: " + getClass().getName() +
+        " | Name: " + this.name + "  |  " + "Age: " + this.getAge();
         return output;
         // also
         // return "Name: " + this.name + "    " + "Age: " + this.getAge();
