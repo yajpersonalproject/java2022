@@ -18,6 +18,16 @@ public class Zebra extends Animal
     {   this.habitat = habitat;
     }
 
+    public void talk()
+    {
+        System.out.println(getClass().getName() + " goes Bray Bray");
+    }
+
+    public void eat()
+    {
+        System.out.println(getClass().getName() + " eats Chomp Chomp");
+    }
+
     public String toString()
     {   return super.toString() + " | Habitat: " + habitat;
     }

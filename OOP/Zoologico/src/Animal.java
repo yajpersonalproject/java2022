@@ -54,7 +54,7 @@ public class Animal
     // https://en.wikipedia.org/wiki/List_of_animal_sounds
     public void talk()
     {
-        System.out.println("Animals don't talk!");
+        System.out.println(getClass().getName() + " don't talk!");
     }
 
     public void eat()
