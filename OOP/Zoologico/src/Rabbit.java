@@ -26,12 +26,12 @@ public class Rabbit extends Animal
 
     public void talk()
     {
-        System.out.println("Squeak squeak");
+        System.out.println(this.getName() + " talks Squeak squeak");
     }
 
     public void eat()
     {
-        System.out.println("Nibble nibble");
+        System.out.println(this.getName() + " eats Nibble nibble");
     }
 
     @Override

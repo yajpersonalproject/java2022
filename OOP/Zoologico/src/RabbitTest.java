@@ -5,5 +5,6 @@ public class RabbitTest
         System.out.println("Rabbit test class");
         // complete this class -- use AnimalExample and ZebraTest as inspiration
 
+        System.out.println();
     }
 }

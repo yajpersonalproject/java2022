@@ -20,12 +20,12 @@ public class Zebra extends Animal
 
     public void talk()
     {
-        System.out.println(getClass().getName() + " goes Bray Bray");
+        System.out.println(getName() + " talks Bray Bray");
     }
 
     public void eat()
     {
-        System.out.println(getClass().getName() + " eats Chomp Chomp");
+        System.out.println(getName() + " eats Chomp Chomp");
     }
 
     public String toString()
