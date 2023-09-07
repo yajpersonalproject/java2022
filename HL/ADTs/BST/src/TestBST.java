@@ -2,6 +2,9 @@ public class TestBST
 {
     public static void main(String[] args)
     {
+        System.out.println(">>> section 02");
+        // Let's instantiate our BST (which will be empty as the...
+        // empty constructor has been invoked)
         BinarySearchTree myBST01 = new BinarySearchTree();
         myBST01.insert("");
         myBST01.insert("");
@@ -9,6 +12,10 @@ public class TestBST
         myBST01.insert("");
         System.out.println("Searching BST for : "+ myBST01.search(""));
         System.out.println("Searching BST for Alan: "+ myBST01.search("Alan"));
+
+        System.out.println("\n\n");
+        System.out.println(">>> section 02");
+        // here we instantiate a BST immediately with its root
         BinarySearchTree myBST02 = new BinarySearchTree("Mikkel");
         myBST02.insert("Chegwin");
         myBST02.insert("Yaj");
