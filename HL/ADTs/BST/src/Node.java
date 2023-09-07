@@ -6,11 +6,11 @@ public class Node
 
     public Node() { }
 
-    public Node(String data)
+    public Node(String key)
     {
-        key = data;
-        left= null;
-        right = null;
+        this.key = key;
+        this.left= null;
+        this.right = null;
     }
 
     public String toString()

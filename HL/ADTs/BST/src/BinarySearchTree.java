@@ -1,68 +1,67 @@
 // WIP!!!
 
-public class BinarySearchTree
-{
+public class BinarySearchTree {
     Node root;
 
-    public BinarySearchTree() { }
-
-    public BinarySearchTree(String data)
-    {
-        Node newNode = new Node(data);
-        this.root = newNode;
+    public BinarySearchTree() {
     }
 
-    public BinarySearchTree(Node root)
-    {
+    public BinarySearchTree(String data) {
+        Node newNode = new Node(data);
+        this.root = newNode;
+        System.out.println("BST root created with data: " + data);
+    }
+
+    public BinarySearchTree(Node root) {
+        System.out.println("BST root created with data: " + root.key);
         this.root = root;
     }
 
-    public void insert(Node node, String data)
-    {
-        if( node == null) // base case
-        {
-            Node temp = new Node(data);
-            node = temp;
-            return;
-        }
-        if(data.compareToIgnoreCase(node.key) > 0)
-        {
-            insert(node.right, data);
-        }
-        if(data.compareToIgnoreCase(node.key) < 0)
-        {
-            insert(node.left, data);
-        }
-
+    public boolean isEmpty() {
+        return root == null;
     }
 
-    public void insert(Node node, Node insertion)
-    {
-        if( node == null) // base case
-        {
-            node = insertion;
-            return;
+    public void insert(String data) {
+        Node temp = new Node(data);
+        if (this.isEmpty()) {
+            root = temp;
+        } else {
+            insert(root, temp);
         }
-        if(insertion.key.compareToIgnoreCase(node.key) > 0)
-        {
-            if(node.right == null)
-            {
+    }
+
+    public void insert(Node node, Node insertion) {
+        if (insertion.key.compareToIgnoreCase(node.key) > 0) {
+            if (node.right == null) {
+                System.out.println("Adding " + insertion + " to the RIGHT of " + node);
                 node.right = insertion;
-            } else
-            {
+            } else {
                 insert(node.right, insertion);
             }
         }
-        if(insertion.key.compareToIgnoreCase(node.key) < 0)
-        {
-            if(node.left == null)
-            {
+        if (insertion.key.compareToIgnoreCase(node.key) < 0) {
+            if (node.left == null) {
+                System.out.println("Adding " + insertion + " to the LEFT of " + node);
                 node.left = insertion;
-            } else
-            {
+            } else {
                 insert(node.left, insertion);
             }
         }
     }
+
+    public boolean search(String data) {
+        return search(root, data);
+    }
+    public boolean search(Node node, String data) {
+        if (node == null)
+            return false;
+        if (data.equalsIgnoreCase(node.key))
+            return true;
+        else if (data.compareToIgnoreCase(node.key) > 0)
+            return search(node.right, data);
+        else //if(data.compareToIgnoreCase(node.key) < 0)
+            return search(node.left, data);
+    }
+
 
 }
