@@ -25,6 +25,7 @@ public class BinarySearchTree {
         Node temp = new Node(data);
         if (this.isEmpty()) {
             root = temp;
+            System.out.println("BST root created with data: " + data);
         } else {
             insert(root, temp);
         }
