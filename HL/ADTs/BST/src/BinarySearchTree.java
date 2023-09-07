@@ -32,16 +32,14 @@ public class BinarySearchTree {
     }
 
     public void insert(Node node, Node insertion) {
-        if (insertion.key.compareToIgnoreCase(node.key) > 0) {
-            if (node.right == null) {
+        if (insertion.key.compareToIgnoreCase(node.key) > 0 && node.right == null) {
                 System.out.println("Adding " + insertion + " to the RIGHT of " + node);
                 node.right = insertion;
             } else {
                 insert(node.right, insertion);
             }
         }
-        if (insertion.key.compareToIgnoreCase(node.key) < 0) {
-            if (node.left == null) {
+        if (insertion.key.compareToIgnoreCase(node.key) < 0 && node.left == null) {
                 System.out.println("Adding " + insertion + " to the LEFT of " + node);
                 node.left = insertion;
             } else {
