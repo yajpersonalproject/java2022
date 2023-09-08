@@ -37,6 +37,14 @@ public class Fish extends Animal {
             this.seaWater = false;
     }
 
+    public void talk() {
+        System.out.println("Glu glu");
+    }
+
+    public void eat() {
+        System.out.println("Nom nom");
+    }
+
     @Override
     public String toString() {
         return super.toString() + " | Salt water fish? " + getSeaWater();

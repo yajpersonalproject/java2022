@@ -6,11 +6,14 @@ public class TestBST
         // Let's instantiate our BST (which will be empty as the...
         // empty constructor has been invoked)
         BinarySearchTree myBST01 = new BinarySearchTree();
-        myBST01.insert("");
-        myBST01.insert("");
-        myBST01.insert("");
-        myBST01.insert("");
-        System.out.println("Searching BST for : "+ myBST01.search(""));
+        myBST01.insert("Neven");
+        myBST01.insert("Thomas");
+        myBST01.insert("Yeyun");
+        myBST01.insert("Danya");
+        myBST01.insert("Eshan");
+        myBST01.insert("Maithli");
+        myBST01.insert("Pahal");
+        System.out.println("Searching BST for : "+ myBST01.search("Pahal"));
         System.out.println("Searching BST for Alan: "+ myBST01.search("Alan"));
 
         System.out.println("\n\n");
