@@ -24,7 +24,7 @@ public class TestBST
         myBST02.insert("Yaj");
         myBST02.insert("Armaan");
         myBST02.insert("Walter");
-        myBST02.insert("Yaj");
+        myBST02.insert("Yajt");
         System.out.println("Searching BST for Yaj: "+ myBST02.search("Yaj"));
         System.out.println("Searching BST for Bruce: "+ myBST02.search("Bruce"));
     }
